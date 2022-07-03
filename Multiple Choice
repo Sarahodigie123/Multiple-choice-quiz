@@ -1,0 +1,42 @@
+# Multiple Choice Quiz
+from Questionss import Question
+
+question_prompts = ["What is the capital of Texas?\n (A) Dallas\n (B) Austin\n (C) San Antonio\n (D) Houston\n\n",
+"What language is the most spoken worldwide?\n (A) Chinese\n (B) Spanish\n (C) Arabic\n (D) English\n\n ",
+"Who was the sixteenth president of the United States?\n (A) Lincoln \n (B) Nixon \n (C) Jackson\n (D) Madison\n\n",
+"Which actor performs music under the stage name Childish Gambino?\n (A) Donald Glover\n (B) Will Smith\n (C) Frank Ocean\n (D) Tyler the Creator\n\n",
+"What is the first book of the Old Testament in the Bible?\n (A) Matthew\n (B) Proverbs\n (C) Genesis\n (D) Exodus\n\n" 
+]
+
+questions = [
+  Question(question_prompts[0],"B"),
+  Question(question_prompts[1],"A"),
+  Question(question_prompts[2],"B"),
+  Question(question_prompts[3],"A"),
+  Question(question_prompts[4],"C"),
+     
+
+]
+
+
+def run_test(questions):
+    x = 0
+    for question in questions:
+        answer = input(question.prompt)
+        if answer == question.answer:
+            x += 1
+    print("You got", str(x), "questions correct!!")
+
+run_test(questions)
+
+
+
+
+
+
+
+
+
+
+
+
